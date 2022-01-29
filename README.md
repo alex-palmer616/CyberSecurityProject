@@ -2,11 +2,12 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![CyberSecurityProject/Diagrams/](Images/network-diagram.jpg)
+![CyberSecurityProject/Diagrams/](Diagrams/network-diagram.jpg)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the filebeat-playbook.yml or metricbeat-playbook.yml file may be used to install only Filebeat or Metricbeat.
 
-  - _CyberSecurityProject/ansible/metricbeat-playbook.yml_ _CyberSecurityProject/ansible/filebeat-playbook.yml_
+- ![metricbeat-playbook.yml](CyberSecurityProject/ansible/metricbeat-playbook.yml)
+- ![filebeat-playbook.yml](CyberSecurityProject/ansible/filebeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -72,8 +73,9 @@ The playbook implements the following tasks:
 - Using Ansibles `systemd` module, enable Docker to start on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
+You can also verify ELK is running by connecting to `https://*your.elk.server.ip*:9200/app/kibania`
 
-![CyberSecurityProject/Diagrams/docker_ps_output.jpeg](diagrams/docker_ps_output.jpeg)
+![CyberSecurityProject/Diagrams/docker_ps_output.jpg](Diagrams/docker_ps_output.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -93,14 +95,7 @@ with Kibana, we are presented with a interactive and live graphical display to l
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the filebeat-config.yml or metricbeat-config.yml to `/etc/filebeat/` or `/etc/metricbeat/` respectivly
+- Copy the [filebeat-config.yml](/CyberSecurityProject/ansible/filebeat-config.yml) or [metricbeat-config.yml](/CyberSecurityProject/ansible/metricbeat-config.yml) to `/etc/filebeat/` or `/etc/metricbeat/` respectivly
 - Update the hosts file to create a new group with the IP addresses of the machines you want the playbook to run
 -- You can also add new IP addresses to an already existing group to run the playbook on newly added machines
 - Run the playbook, and navigate to the Filebeat installation page on the ELK server GUI, make sure your playbook completed steps 1-4 on that page, and on step 5 click `Check Data`
-
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
