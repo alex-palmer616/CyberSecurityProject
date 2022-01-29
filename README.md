@@ -97,5 +97,5 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the [filebeat-config.yml](/CyberSecurityProject/ansible/filebeat-config.yml) or [metricbeat-config.yml](/CyberSecurityProject/ansible/metricbeat-config.yml) to `/etc/filebeat/` or `/etc/metricbeat/` respectivly
 - Update the hosts file to create a new group with the IP addresses of the machines you want the playbook to run
--- You can also add new IP addresses to an already existing group to run the playbook on newly added machines
+  - You can also add new IP addresses to an already existing group to run the playbook on newly added machines
 - Run the playbook, and navigate to the Filebeat installation page on the ELK server GUI, make sure your playbook completed steps 1-4 on that page, and on step 5 click `Check Data`
