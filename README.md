@@ -69,7 +69,7 @@ The playbook implements the following tasks:
 - Using Ansible's `apt` module, `docker.io` and `pip`(Python Installer Package) are installed
 - Using Ansibles `pip` module, `docker.io`'s Python module is installed
 - Using Ansibles `sysctl` module, increase the virtual memory allocated to ELK, allowing it to run properly
--Using Ansibles `docker_container` module, a docker container image containing ELK is downloaded and installed, and configure the ELK containers published ports to `5601:5601` `9200:9200` and `5044:5044`
+- Using Ansibles `docker_container` module, a docker container image containing ELK is downloaded and installed, and configure the ELK containers published ports to `5601:5601` `9200:9200` and `5044:5044`
 - Using Ansibles `systemd` module, enable Docker to start on boot
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
